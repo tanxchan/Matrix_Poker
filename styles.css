@@ -10,8 +10,8 @@
     font-family: 'Clear Sans', sans-serif;
     transition-duration:100ms;
 }
-h1{
-    
+h1, h2{
+    text-align: center;
 }
 .game-wrapper{
     display:flex;
@@ -60,6 +60,7 @@ h1{
     width:var(--entryWidth);
 }
 .controls{
+    width:fit-content;
     background-color:rgb(112, 161, 47);
 }
 .button{
@@ -72,4 +73,13 @@ h1{
     height:fit-content;
     width:fit-content;
     margin:10px;
+}
+@media (max-width: 300px){
+    :root{
+        --entryHeight: 13vh;
+        --entryWidth: 20vw;
+    }
+    .game-wrapper{
+        flex-direction:column;
+    }
 }
