@@ -1,0 +1,26 @@
+.game-board{
+    height:fit-content;
+    width:fit-content;
+    margin:auto;
+    background-color:red;
+}
+.bracket{
+    height:150px;
+    font-size:150px;
+}
+.matrix-wrapper{
+    display:flex;
+    flex-direction:row;
+}
+.matrix-inner{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
+.matrix-entry{
+    display:grid;
+    font-size:75px;
+    height:70px;
+    width:75px;
+}
