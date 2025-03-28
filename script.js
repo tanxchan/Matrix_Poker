@@ -1,7 +1,7 @@
 alert("Controls: \nf - Flop \nn - Next Player \nr - New Round(Automatically Changes Blinds) \nSpace - Flip hand")
 
-const maxVal = 4;
-const minVal = 1;
+const maxVal = 2;
+const minVal = 0;
 let numPlayers = prompt('How many players?');
 let curFlop = 0;
 let curBet = 0;
@@ -140,6 +140,11 @@ document.addEventListener('keydown', function(event) {
 }[event.key]
 callback?.() // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
 });
+
+document.getElementById('flip').addEventListener('click', flipHand);
+document.getElementById('flop').addEventListener('click', flop);
+document.getElementById('next').addEventListener('click', nextPlayer);
+document.getElementById('newr').addEventListener('click', startRound);
 
 //generateMatrix(t);
 //writeMatrix(h, hands[0]);
