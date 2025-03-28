@@ -1,3 +1,5 @@
+alert("Controls: \nf - Flop \nn - Next Player \nr - New Round(Automatically Changes Blinds) \nSpace - Flip hand")
+
 const maxVal = 4;
 const minVal = 1;
 let numPlayers = prompt('How many players?');
@@ -10,7 +12,7 @@ let displayed = false;
 let h = document.getElementById('hand');
 let t = document.getElementById('table');
 let anidelay = 100;
-
+let tableContent = [];
 let hands;
 
 function randMatrix(){
@@ -22,7 +24,9 @@ function randMatrix(){
     return list;
 }
 function generateMatrix(m){
-    writeMatrix(m,randMatrix())
+    let r = randMatrix();
+    writeMatrix(m,r)
+    return r;
 }
 function writeMatrix(m,e,b = [true, true, true, true]){
     m.innerHTML = '';
@@ -84,7 +88,7 @@ function nextPlayer(){
     displayed = false;
 }
 function startRound(){
-    generateMatrix(t);
+    tableContent = generateMatrix(t);
     hands = []
     for (let i = 0; i<numPlayers; i++){
         hands.push(randMatrix());
@@ -114,6 +118,17 @@ function fold(){
 function check(){
 
 }
+
+function calcWinner(){
+    let tMatrix = [[tableContent[0],tableContent[1]],[tableContent[2],tableContent[3]]]
+    let hMatrices = [];
+    for (let i = 0; i<numPlayers; i++){
+        let hMatrix = [[hand[i][0],hand[i][1]],[hand[i][2],hand[i][3]]];
+        hMatrices.push(hMatrix);
+    }
+}
+
+
 document.addEventListener('keydown', function(event) {
     const callback = {
     "f"             : flop,
