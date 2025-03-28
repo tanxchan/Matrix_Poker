@@ -1,26 +1,74 @@
+:root{
+    --entryHeight:68px;
+    --entryWidth:50px;
+}
+*{
+    margin:0;
+    padding:0;
+    user-select: none;
+    text-decoration: none;
+    font-family: 'Clear Sans', sans-serif;
+    transition-duration:100ms;
+}
+h1{
+    
+}
+.game-wrapper{
+    display:flex;
+    flex-direction:row;
+    margin:auto;
+}
 .game-board{
     height:fit-content;
     width:fit-content;
-    margin:auto;
-    background-color:red;
+    background-color:rgb(160, 85, 149);
 }
 .bracket{
-    height:150px;
-    font-size:150px;
+    height:calc(var(--entryHeight)*2);
+    font-size:calc(var(--entryHeight)*1.8);
 }
 .matrix-wrapper{
     display:flex;
     flex-direction:row;
+    padding:10px;
 }
 .matrix-inner{
+    height:calc(var(--entryHeight)*2+10px);
+    width:calc(var(--entryWidth)*2+10px);;
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, var(--entryWidth));
+    grid-template-rows: repeat(2, var(--entryHeight));
     grid-gap: 10px;
 }
 .matrix-entry{
+    margin:0;
     display:grid;
-    font-size:75px;
-    height:70px;
-    width:75px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size:var(--entryHeight);
+    height:var(--entryHeight);
+    width:var(--entryWidth);
+    background-color:whitesmoke;
+    border-radius:10px;
+    padding:0;
+}
+.img-container{
+    object-fit:fill;
+    height:var(--entryHeight);
+    width:var(--entryWidth);
+}
+.controls{
+    background-color:rgb(112, 161, 47);
+}
+.button{
+    background-color:blue;
+    padding:10px;
+    color:white;
+    border:5px;
+    border-radius:20px;
+    border-color:black;
+    height:fit-content;
+    width:fit-content;
+    margin:10px;
 }

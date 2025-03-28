@@ -16,17 +16,30 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="game-wrapper">
         <div class="game-board">
+            <h1>
+                Table:
+            </h1>
             <div class="matrix-wrapper">
                 <p class="bracket">[</p>
                 <div class="matrix-inner" id="table">
-                    <p class="matrix-entry" id="t1">1</p>
-                    <p class="matrix-entry" id="t2">1</p>
-                    <p class="matrix-entry" id="t3">1</p>
-                    <p class="matrix-entry" id="t4">1</p>
+                    <div class="matrix-entry" id="t1">
+                        <p>1</p>
+                    </div>
+                    <div class="matrix-entry" id="t2">
+                        <p>1</p>
+                    </div>
+                    <div class="matrix-entry" id="t3">
+                        <p>1</p>
+                    </div>
+                    <div class="matrix-entry" id="t4">
+                        <p>1</p>
+                    </div>
                 </div>
                 <p class="bracket">]</p>
             </div>
+            <h1 id="pnum">Player 1:</h1>
             <div class="matrix-wrapper">
                 <p class="bracket">[</p>
                 <div class="matrix-inner" id="hand">
@@ -37,6 +50,30 @@
                 </div>
                 <p class="bracket">]</p>
             </div>
+        </div>
+        <!-- <div class="control-screen">
+            <h1>
+                Current Bet:
+            </h1>
+            <p id="current-bet">
+                $100
+            </p>
+            <div class="controls">
+                <h2>Make a move:</h2>
+                <div class="button" id="Raise">
+                    <p>Raise</p>
+                </div>
+                <div class="button" id="call">
+                    <p>Call</p>
+                </div>
+                <div class="button" id="fold">
+                    <p>Fold</p>
+                </div>
+                <div class="button" id="check">
+                    <p>Check</p>
+                </div>
+            </div>
+        </div> -->
         </div>
         <script src="script.js" async defer></script>
     </body>
